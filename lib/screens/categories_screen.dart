@@ -7,12 +7,14 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Meals App"),),
+      appBar: AppBar(
+        title: Text("Meals App"),
+      ),
       body: GridView(
         padding: const EdgeInsets.all(25),
         children: DUMMY_CATEGORIES
             .map(
-              (item) => CategoryItem(item.title, item.color),
+              (item) => CategoryItem(item.id, item.title, item.color),
             )
             .toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
