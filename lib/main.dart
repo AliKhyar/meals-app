@@ -3,6 +3,7 @@ import 'package:meals_app/screens/categories_screen.dart';
 
 import 'screens/categories_screen.dart';
 import 'screens/category_meals_screen.dart';
+import 'screens/meal_detail_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,9 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MealsApp',
       theme: ThemeData(
-        primarySwatch: Colors.lime,
-        accentColor: Colors.grey,
-        canvasColor: Color.fromARGB(232,232,232, 1),
+        primarySwatch: Colors.green,
+        accentColor: Colors.yellow,
+        canvasColor: Color.fromARGB(232,232,250, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               body1: TextStyle(
@@ -36,6 +37,13 @@ class MyApp extends StatelessWidget {
       routes: {
         //'/': (context) => CategoriesScreen(),
         CategoryMealsScreen.routeName: (ctx)=> CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx)=> MealDetailScreen(),
+      },
+      onGenerateRoute: (settings){
+        return MaterialPageRoute(builder: (context)=>CategoriesScreen());
+      },
+      onUnknownRoute: (settings){
+        return MaterialPageRoute(builder: (context)=>CategoriesScreen());
       },
     );
   }

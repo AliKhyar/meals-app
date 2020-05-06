@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:meals_app/data/categories_data.dart';
+import 'package:meals_app/data/app_data.dart';
 import 'package:meals_app/widgets/category_item.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -27,3 +27,4 @@ class CategoriesScreen extends StatelessWidget {
     );
   }
 }
+ 
