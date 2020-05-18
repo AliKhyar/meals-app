@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/screens/categories_screen.dart';
+import 'package:meals_app/screens/tabs_screen.dart';
 
 import 'screens/categories_screen.dart';
 import 'screens/category_meals_screen.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
         accentColor: Colors.yellow,
-        canvasColor: Color.fromARGB(232,232,250, 1),
+        canvasColor: Color.fromARGB(232, 232, 250, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
               body1: TextStyle(
@@ -32,18 +33,18 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: CategoriesScreen(),
+      home: TabsScreen(),
       //initialRoute: '/',
       routes: {
         //'/': (context) => CategoriesScreen(),
-        CategoryMealsScreen.routeName: (ctx)=> CategoryMealsScreen(),
-        MealDetailScreen.routeName: (ctx)=> MealDetailScreen(),
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
-      onGenerateRoute: (settings){
-        return MaterialPageRoute(builder: (context)=>CategoriesScreen());
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(builder: (context) => CategoriesScreen());
       },
-      onUnknownRoute: (settings){
-        return MaterialPageRoute(builder: (context)=>CategoriesScreen());
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (context) => CategoriesScreen());
       },
     );
   }
